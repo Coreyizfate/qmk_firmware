@@ -18,7 +18,7 @@
 
 // clang-format off
 
-enum layers{
+enum layers {
     _BL,
     _SPCL,
     _ALTL,
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,    KC_RBRC,  KC_BSLS,            KC_PGDN,
         KC_ESC,   HR_LALT,  HR_LCTL,  HR_LSFT,  HR_LGUI,  KC_G,     KC_H,     HR_RGUI,  HR_RSFT,  HR_RCTL,  HR_RALT,  KC_QUOT,              KC_ENT,             KC_HOME,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LWIN,  KC_LALT,                                HR_SPCL,                                KC_RALT,  MO(_FL),    KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LWIN,  KC_LALT,                                BL_SPCL,                                KC_RALT,  MO(_FL),    KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [_SPCL] = LAYOUT_ansi_82(
         _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,   _______,            _______,
@@ -75,18 +75,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 };
 
-void leader_start_user(void) {
-    // Do something when the leader key is pressed
-}
+// void leader_start_user(void) {
+//     Do something when the leader key is pressed
+// }
 
-void leader_end_user(void) {
-    if (leader_sequence_one_key(KC_C)) {
-        SEND_STRING(MEH(KC_C));
-    } else if (leader_sequence_two_keys(KC_V)) {
-        SEND_STRING(MEH(KC_V));
-    } else if (leader_sequence_three_keys(KC_O)) {
-        SEND_STRING((LCG(KC_O)));
-    } else if (leader_sequence_two_keys(KC_R)) {
-        SEND_STRING((LCG(KC_R)));
-    }
-}
+// void leader_end_user(void) {
+//     if (leader_sequence_one_key(KC_C)) {
+//         SEND_STRING(MEH(KC_C));
+//     } else if (leader_sequence_one_key(KC_V)) {
+//         SEND_STRING(MEH(KC_V));
+//     } else if (leader_sequence_one_key(KC_O)) {
+//         SEND_STRING((LCG(KC_O)));
+//     } else if (leader_sequence_one_key(KC_R)) {
+//         SEND_STRING((LCG(KC_R)));
+//     }
+// }
