@@ -81,16 +81,12 @@ void leader_start_user(void) {
 
 void leader_end_user(void) {
     if (leader_sequence_one_key(KC_C)) {
-        // Leader, f => Types the below string
         SEND_STRING(MEH(KC_C));
     } else if (leader_sequence_two_keys(KC_V)) {
-        // Leader, d, d => Ctrl+A, Ctrl+C
         SEND_STRING(MEH(KC_V));
     } else if (leader_sequence_three_keys(KC_O)) {
-        // Leader, d, d, s => Types the below string
         SEND_STRING((LCG(KC_O)));
     } else if (leader_sequence_two_keys(KC_R)) {
-        // Leader, a, s => GUI+S
-        tap_code16(LCG(KC_R));
+        SEND_STRING((LCG(KC_R)));
     }
 }
